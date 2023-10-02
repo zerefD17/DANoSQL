@@ -34,9 +34,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(37, 110);
+            button1.Location = new Point(42, 147);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(86, 31);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -44,19 +45,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(79, 41);
+            label1.Location = new Point(443, 172);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(31, 20);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "dat";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(label1);
             Controls.Add(button1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
