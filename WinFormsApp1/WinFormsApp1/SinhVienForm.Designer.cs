@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class FormSV
+    partial class SinhVienForm
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(980, 188);
             dataGridView1.TabIndex = 21;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // btnThem
             // 
@@ -192,7 +193,7 @@
             cbxSoPhong.Size = new Size(183, 28);
             cbxSoPhong.TabIndex = 23;
             // 
-            // FormSV
+            // SinhVienForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -214,7 +215,7 @@
             Controls.Add(txtHoTen);
             Controls.Add(txtEmail);
             Controls.Add(txtID);
-            Name = "FormSV";
+            Name = "SinhVienForm";
             Text = "FormSV";
             Load += FormSV_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

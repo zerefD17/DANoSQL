@@ -37,6 +37,7 @@
             btnXoa = new Button();
             btnSua = new Button();
             button4 = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -115,18 +116,28 @@
             // 
             // button4
             // 
-            button4.Location = new Point(799, 520);
+            button4.Location = new Point(799, 78);
             button4.Name = "button4";
             button4.Size = new Size(94, 29);
             button4.TabIndex = 3;
-            button4.Text = "Sinh Viên";
+            button4.Text = "Sinh viên";
             button4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(799, 160);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 4;
+            button1.Text = "Hóa đơn";
+            button1.UseVisualStyleBackColor = true;
             // 
             // PhongForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1080, 588);
+            Controls.Add(button1);
             Controls.Add(button4);
             Controls.Add(btnSua);
             Controls.Add(btnXoa);
@@ -155,5 +166,6 @@
         private Button btnXoa;
         private Button btnSua;
         private Button button4;
+        private Button button1;
     }
 }

@@ -30,6 +30,6 @@ C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsAp
 C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\linux\native\libmongocrypt.so
 C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win\native\mongocrypt.dll
-C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.FormSV.resources
 C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CopyComplete
 C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.PhongForm.resources
+C:\Users\datho\OneDrive\Máy tính\Documents\CNTT\nosql\doann\DANoSQL\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.SinhVienForm.resources

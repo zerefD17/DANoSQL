@@ -167,18 +167,18 @@ namespace WinFormsApp1
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
             if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
             {
-                
+
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
 
                 // Lấy giá trị của các ô trong hàng được chọn
                 string soPhong = selectedRow.Cells["soPhong"].Value.ToString();
                 string loaiPhong = selectedRow.Cells["loaiPhong"].Value.ToString();
-                
 
-                // Gán giá trị vào các trường nhập tương ứng
+
+
                 txtSoPhong.Text = soPhong;
                 txtLoaiPhong.Text = loaiPhong;
 

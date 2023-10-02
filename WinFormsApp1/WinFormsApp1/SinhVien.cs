@@ -17,5 +17,7 @@ namespace WinFormsApp1
         public string soDienThoai { get; set; }
         public string email { get; set; }
 
+        
+
     }
 }
