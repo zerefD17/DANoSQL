@@ -41,14 +41,14 @@ namespace WinFormsApp1
 
         private void LoadPhongEmpty()
         {
-            var filter = Builders<BsonDocument>.Filter.Where(doc =>
-            doc["sinhVien"].AsBsonArray.Count < doc["loaiPhong"].AsInt32
-        );
+             
+            var filter = Builders<Phong>.Filter.Where(doc =>
+                doc.sinhVien.Count < doc.loaiPhong
+            );
 
-            var documents = collection.Find(filter => true).ToList();
+            var documents = collection.Find(filter).ToList();
 
-
-            //var phongList = collection.Find(_ => true).ToList();
+            
 
             dGV_Phong.DataSource = documents;
             dGV_Phong.Columns["_id"].Visible = false;
@@ -124,6 +124,85 @@ namespace WinFormsApp1
             txtSDT.Text = soDienThoai;
             txtEmail.Text = email;
 
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string idSv = txtID.Text;
+            string tenSv = txtHoTen.Text;
+            DateTime ngaySinh = DateTime.Parse(dTPNgaySinh.Text);
+            string sdt = txtSDT.Text;
+            string email = txtEmail.Text;
+
+            string soPhong = dGV_Phong.SelectedCells[0].Value.ToString();
+
+            
+
+
+            if (string.IsNullOrEmpty(idSv) == true || string.IsNullOrEmpty(tenSv) == true || string.IsNullOrEmpty(sdt) == true || string.IsNullOrEmpty(email) == true || ngaySinh > DateTime.Now|| string.IsNullOrEmpty(soPhong) == true)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                return;
+            }
+            else
+            {
+                MessageBox.Show(idSv+ tenSv+ngaySinh.ToString()+ sdt+ email+ soPhong+"");
+            }
+
+            try
+            {
+                
+
+                var filter = Builders<Phong>.Filter.Where(x => x.sinhVien.Any(sv => sv.idSinhVien == idSv));
+
+                var result = collection.Find(filter).ToList();
+
+                
+                if (result.Count != 0)
+                {
+                    MessageBox.Show("Sinh viên đã tồn tại");
+                }
+                else
+                {
+                    SinhVien sv = new SinhVien();
+                    sv.idSinhVien = idSv;
+                    sv.hoTen = tenSv;
+                    sv.ngaySinh = ngaySinh;
+                    sv.soDienThoai = sdt;
+                    sv.email = email;
+
+
+
+                    var filter1 = Builders<Phong>.Filter.Eq(x => x.soPhong, soPhong);
+
+                    var sinhVienMoi = new SinhVien
+                    {
+                        idSinhVien = idSv.ToString(),
+                        hoTen = tenSv.ToString(),
+                        ngaySinh = DateTime.Parse(dTPNgaySinh.Text),
+                        soDienThoai = sdt.ToString(),
+                        email = email.ToString()
+                    };
+
+                    var update = Builders<Phong>.Update.AddToSet(x => x.sinhVien, sinhVienMoi);
+
+                    collection.UpdateOne(filter1, update );
+                    MessageBox.Show("Thêm phòng thành công!");
+
+                    LoadDataIntoDataGridView();
+
+                }    
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Thêm sv thất bại!");
+            }
+        }
+
+        private void dGV_Phong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow selectedRow = dGV_Phong.Rows[e.RowIndex];
+            string idPhong = selectedRow.Cells["soPhong"].Value.ToString();
         }
     }
 }

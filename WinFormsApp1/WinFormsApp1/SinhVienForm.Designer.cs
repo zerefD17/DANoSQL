@@ -69,6 +69,7 @@
             btnThem.TabIndex = 22;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // btnXoa
             // 
@@ -194,6 +195,7 @@
             dGV_Phong.RowTemplate.Height = 25;
             dGV_Phong.Size = new Size(240, 150);
             dGV_Phong.TabIndex = 24;
+            dGV_Phong.CellClick += dGV_Phong_CellClick;
             // 
             // SinhVienForm
             // 
