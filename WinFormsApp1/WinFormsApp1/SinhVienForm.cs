@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,11 +35,24 @@ namespace WinFormsApp1
         {
 
             LoadDataIntoDataGridView();
-
+            LoadPhongEmpty();
         }
 
 
+        private void LoadPhongEmpty()
+        {
+            var filter = Builders<BsonDocument>.Filter.Where(doc =>
+            doc["sinhVien"].AsBsonArray.Count < doc["loaiPhong"].AsInt32
+        );
 
+            var documents = collection.Find(filter => true).ToList();
+
+
+            //var phongList = collection.Find(_ => true).ToList();
+
+            dGV_Phong.DataSource = documents;
+            dGV_Phong.Columns["_id"].Visible = false;
+        }
 
         private void LoadDataIntoDataGridView()
         {
@@ -50,14 +64,14 @@ namespace WinFormsApp1
             foreach (var phong in phongList)
             {
                 allSinhVien.AddRange(phong.sinhVien);
-                
+
 
             }
 
             // Gán danh sách sinh viên vào DataGridView
-            dataGridView1.DataSource = allSinhVien;
+            dGV_SV.DataSource = allSinhVien;
 
-            
+
 
 
             changeNameCol();
@@ -65,33 +79,33 @@ namespace WinFormsApp1
 
         }
 
-        
+
 
         private void changeNameCol()
         {
 
-            dataGridView1.Columns["idSinhVien"].HeaderText = "ID";
-            dataGridView1.Columns["hoTen"].HeaderText = "Họ và Tên";
-            dataGridView1.Columns["ngaySinh"].HeaderText = "Ngày Sinh";
-            dataGridView1.Columns["soDienThoai"].HeaderText = "Số Điện Thoại";
-            dataGridView1.Columns["email"].HeaderText = "Email";
+            dGV_SV.Columns["idSinhVien"].HeaderText = "ID";
+            dGV_SV.Columns["hoTen"].HeaderText = "Họ và Tên";
+            dGV_SV.Columns["ngaySinh"].HeaderText = "Ngày Sinh";
+            dGV_SV.Columns["soDienThoai"].HeaderText = "Số Điện Thoại";
+            dGV_SV.Columns["email"].HeaderText = "Email";
         }
 
         private void changeWidthCol()
         {
 
-            dataGridView1.Columns["idSinhVien"].Width = 130;
-            dataGridView1.Columns["hoTen"].Width = 150;
-            dataGridView1.Columns["ngaySinh"].Width = 120;
-            dataGridView1.Columns["soDienThoai"].Width = 150;
-            dataGridView1.Columns["email"].Width = 180;
+            dGV_SV.Columns["idSinhVien"].Width = 130;
+            dGV_SV.Columns["hoTen"].Width = 150;
+            dGV_SV.Columns["ngaySinh"].Width = 120;
+            dGV_SV.Columns["soDienThoai"].Width = 150;
+            dGV_SV.Columns["email"].Width = 180;
 
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Lấy dữ liệu của hàng được chọn
-            DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+            DataGridViewRow selectedRow = dGV_SV.Rows[e.RowIndex];
 
             // Lấy giá trị của các ô trong hàng được chọn
             string idSinhVien = selectedRow.Cells["idSinhVien"].Value.ToString();
@@ -99,7 +113,7 @@ namespace WinFormsApp1
             string ngaySinh = selectedRow.Cells["ngaySinh"].Value.ToString();
             string soDienThoai = selectedRow.Cells["soDienThoai"].Value.ToString();
             string email = selectedRow.Cells["email"].Value.ToString();
-            
+
 
             // Gán giá trị vào các trường nhập tương ứng
             txtID.Text = idSinhVien;
@@ -109,7 +123,7 @@ namespace WinFormsApp1
             dTPNgaySinh.Value = ngaySinhDateTime;
             txtSDT.Text = soDienThoai;
             txtEmail.Text = email;
-            
+
         }
     }
 }

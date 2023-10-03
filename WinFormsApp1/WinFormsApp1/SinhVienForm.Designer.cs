@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dGV_SV = new DataGridView();
             btnThem = new Button();
             btnXoa = new Button();
             btnSua = new Button();
@@ -42,170 +42,171 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            label6 = new Label();
             label1 = new Label();
-            cbxSoPhong = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dGV_Phong = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dGV_SV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dGV_Phong).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dGV_SV
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(63, 430);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(980, 188);
-            dataGridView1.TabIndex = 21;
-            dataGridView1.CellClick += dataGridView1_CellClick;
+            dGV_SV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGV_SV.Location = new Point(12, 318);
+            dGV_SV.Margin = new Padding(3, 2, 3, 2);
+            dGV_SV.Name = "dGV_SV";
+            dGV_SV.RowHeadersWidth = 51;
+            dGV_SV.RowTemplate.Height = 29;
+            dGV_SV.Size = new Size(858, 141);
+            dGV_SV.TabIndex = 21;
+            dGV_SV.CellClick += dataGridView1_CellClick;
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(914, 96);
+            btnThem.Location = new Point(800, 72);
+            btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(94, 29);
+            btnThem.Size = new Size(82, 22);
             btnThem.TabIndex = 22;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(914, 153);
+            btnXoa.Location = new Point(800, 115);
+            btnXoa.Margin = new Padding(3, 2, 3, 2);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(94, 29);
+            btnXoa.Size = new Size(82, 22);
             btnXoa.TabIndex = 22;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(914, 224);
+            btnSua.Location = new Point(800, 168);
+            btnSua.Margin = new Padding(3, 2, 3, 2);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(94, 29);
+            btnSua.Size = new Size(82, 22);
             btnSua.TabIndex = 22;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
             // 
             // btnHoaDon
             // 
-            btnHoaDon.Location = new Point(914, 331);
+            btnHoaDon.Location = new Point(800, 248);
+            btnHoaDon.Margin = new Padding(3, 2, 3, 2);
             btnHoaDon.Name = "btnHoaDon";
-            btnHoaDon.Size = new Size(94, 29);
+            btnHoaDon.Size = new Size(82, 22);
             btnHoaDon.TabIndex = 22;
             btnHoaDon.Text = "Hóa Đơn";
             btnHoaDon.UseVisualStyleBackColor = true;
             // 
             // txtID
             // 
-            txtID.Location = new Point(172, 102);
+            txtID.Location = new Point(150, 42);
+            txtID.Margin = new Padding(3, 2, 3, 2);
             txtID.Name = "txtID";
-            txtID.Size = new Size(221, 27);
+            txtID.Size = new Size(194, 23);
             txtID.TabIndex = 7;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(554, 105);
+            txtEmail.Location = new Point(150, 247);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(183, 27);
+            txtEmail.Size = new Size(161, 23);
             txtEmail.TabIndex = 18;
             // 
             // txtHoTen
             // 
-            txtHoTen.Location = new Point(172, 175);
+            txtHoTen.Location = new Point(150, 87);
+            txtHoTen.Margin = new Padding(3, 2, 3, 2);
             txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(221, 27);
+            txtHoTen.Size = new Size(194, 23);
             txtHoTen.TabIndex = 8;
             // 
             // txtSDT
             // 
-            txtSDT.Location = new Point(172, 322);
+            txtSDT.Location = new Point(150, 191);
+            txtSDT.Margin = new Padding(3, 2, 3, 2);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(221, 27);
+            txtSDT.Size = new Size(194, 23);
             txtSDT.TabIndex = 17;
             // 
             // dTPNgaySinh
             // 
             dTPNgaySinh.Format = DateTimePickerFormat.Short;
-            dTPNgaySinh.Location = new Point(172, 244);
+            dTPNgaySinh.Location = new Point(150, 139);
+            dTPNgaySinh.Margin = new Padding(3, 2, 3, 2);
             dTPNgaySinh.Name = "dTPNgaySinh";
-            dTPNgaySinh.Size = new Size(221, 27);
+            dTPNgaySinh.Size = new Size(194, 23);
             dTPNgaySinh.TabIndex = 9;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(63, 175);
+            label2.Location = new Point(55, 87);
             label2.Name = "label2";
-            label2.Size = new Size(54, 20);
+            label2.Size = new Size(43, 15);
             label2.TabIndex = 15;
             label2.Text = "Họ tên";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(63, 249);
+            label3.Location = new Point(55, 139);
             label3.Name = "label3";
-            label3.Size = new Size(74, 20);
+            label3.Size = new Size(60, 15);
             label3.TabIndex = 14;
             label3.Text = "Ngày sinh";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(63, 322);
+            label4.Location = new Point(55, 191);
             label4.Name = "label4";
-            label4.Size = new Size(97, 20);
+            label4.Size = new Size(76, 15);
             label4.TabIndex = 13;
             label4.Text = "Số điện thoại";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(458, 109);
+            label5.Location = new Point(55, 252);
             label5.Name = "label5";
-            label5.Size = new Size(46, 20);
+            label5.Size = new Size(36, 15);
             label5.TabIndex = 12;
             label5.Text = "Email";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(458, 185);
-            label6.Name = "label6";
-            label6.Size = new Size(72, 20);
-            label6.TabIndex = 11;
-            label6.Text = "Số Phòng";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(63, 105);
+            label1.Location = new Point(55, 45);
             label1.Name = "label1";
-            label1.Size = new Size(24, 20);
+            label1.Size = new Size(18, 15);
             label1.TabIndex = 16;
             label1.Text = "ID";
             // 
-            // cbxSoPhong
+            // dGV_Phong
             // 
-            cbxSoPhong.FormattingEnabled = true;
-            cbxSoPhong.Location = new Point(554, 185);
-            cbxSoPhong.Name = "cbxSoPhong";
-            cbxSoPhong.Size = new Size(183, 28);
-            cbxSoPhong.TabIndex = 23;
+            dGV_Phong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGV_Phong.Location = new Point(455, 40);
+            dGV_Phong.Name = "dGV_Phong";
+            dGV_Phong.RowTemplate.Height = 25;
+            dGV_Phong.Size = new Size(240, 150);
+            dGV_Phong.TabIndex = 24;
             // 
             // SinhVienForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1191, 686);
-            Controls.Add(cbxSoPhong);
+            ClientSize = new Size(1042, 514);
+            Controls.Add(dGV_Phong);
             Controls.Add(btnHoaDon);
             Controls.Add(btnSua);
             Controls.Add(btnXoa);
             Controls.Add(btnThem);
-            Controls.Add(dataGridView1);
+            Controls.Add(dGV_SV);
             Controls.Add(dTPNgaySinh);
-            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -215,16 +216,18 @@
             Controls.Add(txtHoTen);
             Controls.Add(txtEmail);
             Controls.Add(txtID);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "SinhVienForm";
             Text = "FormSV";
             Load += FormSV_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dGV_SV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dGV_Phong).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridView1;
+        private DataGridView dGV_SV;
         private Button btnThem;
         private Button btnXoa;
         private Button btnSua;
@@ -238,8 +241,7 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private Label label6;
         private Label label1;
-        private ComboBox cbxSoPhong;
+        private DataGridView dGV_Phong;
     }
 }
