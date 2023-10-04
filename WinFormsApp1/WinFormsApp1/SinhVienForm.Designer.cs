@@ -30,7 +30,6 @@
         {
             dGV_SV = new DataGridView();
             btnThem = new Button();
-            btnXoa = new Button();
             btnSua = new Button();
             btnHoaDon = new Button();
             txtID = new TextBox();
@@ -62,7 +61,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(800, 72);
+            btnThem.Location = new Point(455, 245);
             btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(82, 22);
@@ -71,19 +70,9 @@
             btnThem.UseVisualStyleBackColor = true;
             btnThem.Click += btnThem_Click;
             // 
-            // btnXoa
-            // 
-            btnXoa.Location = new Point(800, 115);
-            btnXoa.Margin = new Padding(3, 2, 3, 2);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(82, 22);
-            btnXoa.TabIndex = 22;
-            btnXoa.Text = "Xóa";
-            btnXoa.UseVisualStyleBackColor = true;
-            // 
             // btnSua
             // 
-            btnSua.Location = new Point(800, 168);
+            btnSua.Location = new Point(585, 248);
             btnSua.Margin = new Padding(3, 2, 3, 2);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(82, 22);
@@ -94,13 +83,14 @@
             // 
             // btnHoaDon
             // 
-            btnHoaDon.Location = new Point(800, 248);
+            btnHoaDon.Location = new Point(826, 481);
             btnHoaDon.Margin = new Padding(3, 2, 3, 2);
             btnHoaDon.Name = "btnHoaDon";
             btnHoaDon.Size = new Size(82, 22);
             btnHoaDon.TabIndex = 22;
             btnHoaDon.Text = "Hóa Đơn";
             btnHoaDon.UseVisualStyleBackColor = true;
+            btnHoaDon.Click += btnHoaDon_Click;
             // 
             // txtID
             // 
@@ -207,7 +197,6 @@
             Controls.Add(dGV_Phong);
             Controls.Add(btnHoaDon);
             Controls.Add(btnSua);
-            Controls.Add(btnXoa);
             Controls.Add(btnThem);
             Controls.Add(dGV_SV);
             Controls.Add(dTPNgaySinh);
@@ -233,7 +222,6 @@
         #endregion
         private DataGridView dGV_SV;
         private Button btnThem;
-        private Button btnXoa;
         private Button btnSua;
         private Button btnHoaDon;
         private TextBox txtID;

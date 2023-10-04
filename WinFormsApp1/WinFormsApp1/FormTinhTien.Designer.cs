@@ -43,6 +43,7 @@
             btn_ThanhToan = new Button();
             dGV_HoaDon = new DataGridView();
             txt_Ky = new TextBox();
+            btn_huyHD = new Button();
             ((System.ComponentModel.ISupportInitialize)dGV_HoaDon).BeginInit();
             SuspendLayout();
             // 
@@ -149,7 +150,7 @@
             // 
             // btn_ThanhToan
             // 
-            btn_ThanhToan.Location = new Point(553, 466);
+            btn_ThanhToan.Location = new Point(343, 466);
             btn_ThanhToan.Name = "btn_ThanhToan";
             btn_ThanhToan.Size = new Size(116, 23);
             btn_ThanhToan.TabIndex = 6;
@@ -174,11 +175,22 @@
             txt_Ky.Size = new Size(100, 23);
             txt_Ky.TabIndex = 7;
             // 
+            // btn_huyHD
+            // 
+            btn_huyHD.Location = new Point(488, 466);
+            btn_huyHD.Name = "btn_huyHD";
+            btn_huyHD.Size = new Size(140, 23);
+            btn_huyHD.TabIndex = 8;
+            btn_huyHD.Text = "Hủy hóa đơn";
+            btn_huyHD.UseVisualStyleBackColor = true;
+            btn_huyHD.Click += btn_huyHD_Click;
+            // 
             // FormTinhTien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 523);
+            Controls.Add(btn_huyHD);
             Controls.Add(txt_Ky);
             Controls.Add(btn_ThanhToan);
             Controls.Add(dGV_HoaDon);
@@ -219,5 +231,6 @@
         private Button btn_ThanhToan;
         private DataGridView dGV_HoaDon;
         private TextBox txt_Ky;
+        private Button btn_huyHD;
     }
 }

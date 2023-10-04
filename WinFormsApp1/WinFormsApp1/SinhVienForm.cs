@@ -311,5 +311,11 @@ namespace WinFormsApp1
                 MessageBox.Show("Không thể sửa sv thất bại!");
             }
         }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            FormTinhTien tt = new FormTinhTien();
+            tt.Show();
+        }
     }
 }

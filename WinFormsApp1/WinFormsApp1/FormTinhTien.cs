@@ -60,8 +60,9 @@ namespace WinFormsApp1
                 txt_CSDienCu.Text = sdn.chiSoDien.ToString();
                 txt_CSNuocCu.Text = sdn.chiSoNuoc.ToString();
                 var kyTruoc = sdn.ky.ToString();
-                var t = kyTruoc.Substring(0, 1);
-                int thang = int.Parse(t);
+                //var t = kyTruoc.Substring(0, 1);
+                var t = kyTruoc.Split('/');
+                int thang = int.Parse(t[0]);
                 var n = kyTruoc.Substring(kyTruoc.Length - 4);
                 int nam = int.Parse(n);
                 string kysau = "";
@@ -119,10 +120,46 @@ namespace WinFormsApp1
 
         private void btn_TaoHoaDon_Click(object sender, EventArgs e)
         {
-            int csDienMoi = int.Parse(txt_CSDienMoi.Text.ToString());
-            int csNuocMoi = int.Parse(txt_CSNuocMoi.Text.ToString());
-            int csDienCu = int.Parse(txt_CSDienCu.Text.ToString());
-            int csNuocCu = int.Parse(txt_CSNuocCu.Text.ToString());
+            int csDienMoi;
+            if (string.IsNullOrEmpty(txt_CSDienMoi.Text.ToString()) == false)
+            {
+                csDienMoi = int.Parse(txt_CSDienMoi.Text.ToString());
+            }
+            else
+            {
+                csDienMoi = 0;
+            }
+
+            int csNuocMoi;
+            if (string.IsNullOrEmpty(txt_CSNuocMoi.Text.ToString()) == false)
+            {
+                csNuocMoi = int.Parse(txt_CSNuocMoi.Text.ToString());
+            }
+            else
+            {
+                csNuocMoi = 0;
+            }
+
+            int csDienCu;
+            if (string.IsNullOrEmpty(txt_CSDienCu.Text.ToString())==false)
+            {
+                csDienCu = int.Parse(txt_CSDienCu.Text.ToString());
+            }
+            else
+            {
+                csDienCu = 0;
+            }
+
+            int csNuocCu;
+            if (string.IsNullOrEmpty(txt_CSNuocCu.Text.ToString())==false)
+            {
+                csNuocCu = int.Parse(txt_CSNuocCu.Text.ToString());
+            }
+            else
+            {
+                csNuocCu = 0;
+            }
+            
             if (csDienMoi < csDienCu || csNuocMoi < csNuocCu)
             {
                 MessageBox.Show("Vui lòng lại chỉ số điện mới và chỉ số nước mới!");
@@ -136,7 +173,7 @@ namespace WinFormsApp1
                             );
                 var dienNuoc = new SoDienNuoc
                 {
-                    idDienNuoc = "DN" + txt_Ky.Text.ToString(),
+                    idDienNuoc = "DN" + cbb_Phong.SelectedItem.ToString() + txt_Ky.Text.ToString(),
                     chiSoDien = csDienMoi,
                     chiSoNuoc = csNuocMoi,
                     ky = txt_Ky.Text.ToString()
@@ -161,6 +198,9 @@ namespace WinFormsApp1
 
                 collection.UpdateOne(filter, update1);
                 MessageBox.Show("Tạo hóa đơn thành công!");
+                loadHoaDon();
+                loadDienNuocCu();
+
             }
         }
 
@@ -204,6 +244,47 @@ namespace WinFormsApp1
             else
             {
                 MessageBox.Show("Chọn hóa đơn muốn thanh toán!");
+            }
+        }
+
+        private void btn_huyHD_Click(object sender, EventArgs e)
+        {
+            string soHD = "";
+            string idDN = "";
+            if (dGV_HoaDon.SelectedRows.Count > 0)
+            {
+                // Lấy dòng đầu tiên được chọn
+                DataGridViewRow selectedRow = dGV_HoaDon.SelectedRows[0];
+
+                // Lấy ô đầu tiên trong dòng được chọn
+                DataGridViewCell firstCell = selectedRow.Cells[0];
+                DataGridViewCell secondCell = selectedRow.Cells[1];
+                // Lấy giá trị của ô đầu tiên
+                soHD = firstCell.Value.ToString();
+                idDN = secondCell.Value.ToString();
+            }
+            if (string.IsNullOrEmpty(soHD) == false)
+            {
+                var filter = Builders<Phong>.Filter.Where(doc =>
+                                    doc.soPhong == cbb_Phong.SelectedItem.ToString());
+
+
+                var pullFilter1 = Builders<SoDienNuoc>.Filter.Eq("idDienNuoc", idDN);
+                var update1 = Builders<Phong>.Update.PullFilter("soDienNuoc", pullFilter1);
+                var updateOptions1 = new UpdateOptions { IsUpsert = false };
+                collection.UpdateMany(filter, update1, updateOptions1);
+
+                var pullFilter = Builders<HoaDon>.Filter.Eq("so_hoa_don", soHD);
+                var update = Builders<Phong>.Update.PullFilter("hoaDon", pullFilter);
+                var updateOptions = new UpdateOptions { IsUpsert = false };
+                collection.UpdateMany(filter, update, updateOptions);
+
+                MessageBox.Show("Đã hủy hóa đơn!");
+                loadHoaDon();
+            }
+            else
+            {
+                MessageBox.Show("Không thể hủy hóa đơn!");
             }
         }
     }
