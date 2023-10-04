@@ -90,6 +90,7 @@
             btnSua.TabIndex = 22;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnHoaDon
             // 
@@ -193,6 +194,7 @@
             dGV_Phong.Location = new Point(455, 40);
             dGV_Phong.Name = "dGV_Phong";
             dGV_Phong.RowTemplate.Height = 25;
+            dGV_Phong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dGV_Phong.Size = new Size(240, 150);
             dGV_Phong.TabIndex = 24;
             dGV_Phong.CellClick += dGV_Phong_CellClick;

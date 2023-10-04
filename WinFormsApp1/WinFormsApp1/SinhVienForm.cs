@@ -41,14 +41,14 @@ namespace WinFormsApp1
 
         private void LoadPhongEmpty()
         {
-             
+
             var filter = Builders<Phong>.Filter.Where(doc =>
                 doc.sinhVien.Count < doc.loaiPhong
             );
 
             var documents = collection.Find(filter).ToList();
 
-            
+
 
             dGV_Phong.DataSource = documents;
             dGV_Phong.Columns["_id"].Visible = false;
@@ -101,7 +101,16 @@ namespace WinFormsApp1
             dGV_SV.Columns["email"].Width = 180;
 
         }
+        public void reset()
+        {
+            LoadDataIntoDataGridView();
+            LoadPhongEmpty();
+            txtEmail.Clear();
+            txtHoTen.Clear();
+            txtSDT.Clear();
+            txtID.Clear();
 
+        }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Lấy dữ liệu của hàng được chọn
@@ -134,30 +143,45 @@ namespace WinFormsApp1
             string sdt = txtSDT.Text;
             string email = txtEmail.Text;
 
-            string soPhong = dGV_Phong.SelectedCells[0].Value.ToString();
+            string soPhong = "";
+            if (dGV_Phong.SelectedRows.Count > 0)
+            {
+                // Lấy dòng đầu tiên được chọn
+                DataGridViewRow selectedRow = dGV_Phong.SelectedRows[0];
 
-            
+                // Lấy ô đầu tiên trong dòng được chọn
+                DataGridViewCell firstCell = selectedRow.Cells[1];
+
+                // Lấy giá trị của ô đầu tiên
+                soPhong = firstCell.Value.ToString();
+
+            }
+            if (string.IsNullOrEmpty(soPhong) == true)
+            {
+                MessageBox.Show("Vui lòng chọn phòng cho sinh viên!");
+                return;
+            }
 
 
-            if (string.IsNullOrEmpty(idSv) == true || string.IsNullOrEmpty(tenSv) == true || string.IsNullOrEmpty(sdt) == true || string.IsNullOrEmpty(email) == true || ngaySinh > DateTime.Now|| string.IsNullOrEmpty(soPhong) == true)
+            if (string.IsNullOrEmpty(idSv) == true || string.IsNullOrEmpty(tenSv) == true || string.IsNullOrEmpty(sdt) == true || string.IsNullOrEmpty(email) == true || ngaySinh > DateTime.Now || string.IsNullOrEmpty(soPhong) == true)
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                 return;
             }
-            else
-            {
-                MessageBox.Show(idSv+ tenSv+ngaySinh.ToString()+ sdt+ email+ soPhong+"");
-            }
+            //else
+            //{
+            //    MessageBox.Show(idSv + tenSv + ngaySinh.ToString() + sdt + email + soPhong + "");
+            //}
 
             try
             {
-                
+
 
                 var filter = Builders<Phong>.Filter.Where(x => x.sinhVien.Any(sv => sv.idSinhVien == idSv));
 
                 var result = collection.Find(filter).ToList();
 
-                
+
                 if (result.Count != 0)
                 {
                     MessageBox.Show("Sinh viên đã tồn tại");
@@ -186,14 +210,14 @@ namespace WinFormsApp1
 
                     var update = Builders<Phong>.Update.AddToSet(x => x.sinhVien, sinhVienMoi);
 
-                    collection.UpdateOne(filter1, update );
-                    MessageBox.Show("Thêm phòng thành công!");
+                    collection.UpdateOne(filter1, update);
+                    MessageBox.Show("Thêm sinh viên thành công!");
 
-                    LoadDataIntoDataGridView();
+                    reset();
 
-                }    
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Thêm sv thất bại!");
             }
@@ -203,6 +227,89 @@ namespace WinFormsApp1
         {
             DataGridViewRow selectedRow = dGV_Phong.Rows[e.RowIndex];
             string idPhong = selectedRow.Cells["soPhong"].Value.ToString();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string idSv = txtID.Text;
+            string tenSv = txtHoTen.Text;
+            DateTime ngaySinh = DateTime.Parse(dTPNgaySinh.Text);
+            string sdt = txtSDT.Text;
+            string email = txtEmail.Text;
+
+            //string soPhong = dGV_Phong.SelectedCells[0].Value.ToString();
+
+
+
+
+            if (string.IsNullOrEmpty(idSv) == true || string.IsNullOrEmpty(tenSv) == true || string.IsNullOrEmpty(sdt) == true || string.IsNullOrEmpty(email) == true || ngaySinh > DateTime.Now)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                return;
+            }
+
+            try
+            {
+
+
+                var filter = Builders<Phong>.Filter.Where(x => x.sinhVien.Any(sv => sv.idSinhVien == idSv));
+
+                var result = collection.Find(filter).ToList();
+
+
+                if (result.Count == 0)
+                {
+                    MessageBox.Show("Sinh viên không tồn tại");
+                }
+                else
+                {
+                    SinhVien sv = new SinhVien();
+                    sv.idSinhVien = idSv;
+                    sv.hoTen = tenSv;
+                    sv.ngaySinh = ngaySinh;
+                    sv.soDienThoai = sdt;
+                    sv.email = email;
+
+
+
+
+
+                    var sinhVienMoi = new SinhVien
+                    {
+                        idSinhVien = idSv.ToString(),
+                        hoTen = tenSv.ToString(),
+                        ngaySinh = DateTime.Parse(dTPNgaySinh.Text),
+                        soDienThoai = sdt.ToString(),
+                        email = email.ToString()
+                    };
+
+                    var filter1 = Builders<Phong>.Filter.Where(x => x.sinhVien.Any(s => s.idSinhVien == sinhVienMoi.idSinhVien));
+                    var update = Builders<Phong>.Update.Set(
+                        "sinhVien.$[sv].hoTen", sinhVienMoi.hoTen)
+                        .Set("sinhVien.$[sv].soDienThoai", sinhVienMoi.soDienThoai)
+                        .Set("sinhVien.$[sv].email", sinhVienMoi.email)
+                        .Set("sinhVien.$[sv].ngaySinh", new BsonDateTime(sinhVienMoi.ngaySinh));
+
+                    var arrayFilters = new[]
+                    {
+                        new BsonDocumentArrayFilterDefinition<Phong>(new BsonDocument("sv.idSinhVien",sinhVienMoi.idSinhVien))
+                        // Thêm các điều kiện khác nếu cần thiết
+                    };
+
+                    // Thực hiện update
+                    var updateOptions = new UpdateOptions { ArrayFilters = arrayFilters };
+
+                    collection.UpdateOne(filter1, update, updateOptions);
+                    MessageBox.Show("Đã sửa thành công!");
+
+                    reset();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể sửa sv thất bại!");
+            }
         }
     }
 }

@@ -19,8 +19,8 @@ namespace WinFormsApp1
         [BsonElement("ngay_het_han")]
         public DateTime NgayHetHan { get; set; }
 
-        [BsonElement("phi_tre_han")]
-        public int PhiTreHan { get; set; }
+        //[BsonElement("phi_tre_han")]
+        //public int PhiTreHan { get; set; }
 
         [BsonElement("thoi_gian_tao")]
         public DateTime ThoiGianTao { get; set; }
@@ -30,5 +30,8 @@ namespace WinFormsApp1
 
         [BsonElement("note")]
         public string Note { get; set; }
+
+        [BsonElement("ngayThanhToan")]
+        public DateTime NgayThanhToan { get; set; }
     }
 }

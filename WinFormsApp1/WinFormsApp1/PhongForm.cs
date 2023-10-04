@@ -190,5 +190,11 @@ namespace WinFormsApp1
             SinhVienForm svf = new SinhVienForm();
             svf.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormTinhTien tt = new FormTinhTien();
+            tt.Show();
+        }
     }
 }
