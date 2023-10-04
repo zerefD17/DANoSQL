@@ -38,6 +38,7 @@
             btnSua = new Button();
             btn_SV = new Button();
             button1 = new Button();
+            btn_QlSVP = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(680, 141);
+            dataGridView1.Size = new Size(364, 141);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -122,7 +123,7 @@
             // 
             // btn_SV
             // 
-            btn_SV.Location = new Point(699, 58);
+            btn_SV.Location = new Point(102, 385);
             btn_SV.Margin = new Padding(3, 2, 3, 2);
             btn_SV.Name = "btn_SV";
             btn_SV.Size = new Size(82, 22);
@@ -133,7 +134,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(699, 120);
+            button1.Location = new Point(209, 385);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(82, 22);
@@ -142,11 +143,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // btn_QlSVP
+            // 
+            btn_QlSVP.Location = new Point(307, 385);
+            btn_QlSVP.Name = "btn_QlSVP";
+            btn_QlSVP.Size = new Size(125, 23);
+            btn_QlSVP.TabIndex = 5;
+            btn_QlSVP.Text = "Quản lý Sv-Phòng";
+            btn_QlSVP.UseVisualStyleBackColor = true;
+            btn_QlSVP.Click += btn_QlSVP_Click;
+            // 
             // PhongForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(945, 441);
+            Controls.Add(btn_QlSVP);
             Controls.Add(button1);
             Controls.Add(btn_SV);
             Controls.Add(btnSua);
@@ -178,5 +190,6 @@
         private Button btnSua;
         private Button btn_SV;
         private Button button1;
+        private Button btn_QlSVP;
     }
 }

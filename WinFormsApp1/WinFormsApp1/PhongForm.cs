@@ -196,5 +196,11 @@ namespace WinFormsApp1
             FormTinhTien tt = new FormTinhTien();
             tt.Show();
         }
+
+        private void btn_QlSVP_Click(object sender, EventArgs e)
+        {
+            FormQLPhongSv svp = new FormQLPhongSv();
+            svp.Show();
+        }
     }
 }

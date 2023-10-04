@@ -69,3 +69,4 @@ D:\sang\HK7\nosql\danosql\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\Win
 D:\sang\HK7\nosql\danosql\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\sang\HK7\nosql\danosql\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
 D:\sang\HK7\nosql\danosql\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.FormTinhTien.resources
+D:\sang\HK7\nosql\danosql\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.FormQLPhongSv.resources
