@@ -31,7 +31,6 @@
             dGV_SV = new DataGridView();
             btnThem = new Button();
             btnSua = new Button();
-            btnHoaDon = new Button();
             txtID = new TextBox();
             txtEmail = new TextBox();
             txtHoTen = new TextBox();
@@ -50,21 +49,19 @@
             // dGV_SV
             // 
             dGV_SV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGV_SV.Location = new Point(12, 318);
-            dGV_SV.Margin = new Padding(3, 2, 3, 2);
+            dGV_SV.Location = new Point(14, 424);
             dGV_SV.Name = "dGV_SV";
             dGV_SV.RowHeadersWidth = 51;
             dGV_SV.RowTemplate.Height = 29;
-            dGV_SV.Size = new Size(858, 141);
+            dGV_SV.Size = new Size(981, 188);
             dGV_SV.TabIndex = 21;
             dGV_SV.CellClick += dataGridView1_CellClick;
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(455, 245);
-            btnThem.Margin = new Padding(3, 2, 3, 2);
+            btnThem.Location = new Point(520, 327);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(82, 22);
+            btnThem.Size = new Size(94, 29);
             btnThem.TabIndex = 22;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
@@ -72,130 +69,114 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(585, 248);
-            btnSua.Margin = new Padding(3, 2, 3, 2);
+            btnSua.Location = new Point(669, 331);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(82, 22);
+            btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 22;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
             btnSua.Click += btnSua_Click;
             // 
-            // btnHoaDon
-            // 
-            btnHoaDon.Location = new Point(826, 481);
-            btnHoaDon.Margin = new Padding(3, 2, 3, 2);
-            btnHoaDon.Name = "btnHoaDon";
-            btnHoaDon.Size = new Size(82, 22);
-            btnHoaDon.TabIndex = 22;
-            btnHoaDon.Text = "Hóa Đơn";
-            btnHoaDon.UseVisualStyleBackColor = true;
-            btnHoaDon.Click += btnHoaDon_Click;
-            // 
             // txtID
             // 
-            txtID.Location = new Point(150, 42);
-            txtID.Margin = new Padding(3, 2, 3, 2);
+            txtID.Location = new Point(171, 56);
             txtID.Name = "txtID";
-            txtID.Size = new Size(194, 23);
+            txtID.Size = new Size(221, 27);
             txtID.TabIndex = 7;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(150, 247);
-            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Location = new Point(171, 329);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(161, 23);
+            txtEmail.Size = new Size(183, 27);
             txtEmail.TabIndex = 18;
             // 
             // txtHoTen
             // 
-            txtHoTen.Location = new Point(150, 87);
-            txtHoTen.Margin = new Padding(3, 2, 3, 2);
+            txtHoTen.Location = new Point(171, 116);
             txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(194, 23);
+            txtHoTen.Size = new Size(221, 27);
             txtHoTen.TabIndex = 8;
             // 
             // txtSDT
             // 
-            txtSDT.Location = new Point(150, 191);
-            txtSDT.Margin = new Padding(3, 2, 3, 2);
+            txtSDT.Location = new Point(171, 255);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(194, 23);
+            txtSDT.Size = new Size(221, 27);
             txtSDT.TabIndex = 17;
             // 
             // dTPNgaySinh
             // 
             dTPNgaySinh.Format = DateTimePickerFormat.Short;
-            dTPNgaySinh.Location = new Point(150, 139);
-            dTPNgaySinh.Margin = new Padding(3, 2, 3, 2);
+            dTPNgaySinh.Location = new Point(171, 185);
             dTPNgaySinh.Name = "dTPNgaySinh";
-            dTPNgaySinh.Size = new Size(194, 23);
+            dTPNgaySinh.Size = new Size(221, 27);
             dTPNgaySinh.TabIndex = 9;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(55, 87);
+            label2.Location = new Point(63, 116);
             label2.Name = "label2";
-            label2.Size = new Size(43, 15);
+            label2.Size = new Size(54, 20);
             label2.TabIndex = 15;
             label2.Text = "Họ tên";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(55, 139);
+            label3.Location = new Point(63, 185);
             label3.Name = "label3";
-            label3.Size = new Size(60, 15);
+            label3.Size = new Size(74, 20);
             label3.TabIndex = 14;
             label3.Text = "Ngày sinh";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(55, 191);
+            label4.Location = new Point(63, 255);
             label4.Name = "label4";
-            label4.Size = new Size(76, 15);
+            label4.Size = new Size(97, 20);
             label4.TabIndex = 13;
             label4.Text = "Số điện thoại";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(55, 252);
+            label5.Location = new Point(63, 336);
             label5.Name = "label5";
-            label5.Size = new Size(36, 15);
+            label5.Size = new Size(46, 20);
             label5.TabIndex = 12;
             label5.Text = "Email";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(55, 45);
+            label1.Location = new Point(63, 60);
             label1.Name = "label1";
-            label1.Size = new Size(18, 15);
+            label1.Size = new Size(24, 20);
             label1.TabIndex = 16;
             label1.Text = "ID";
             // 
             // dGV_Phong
             // 
             dGV_Phong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGV_Phong.Location = new Point(455, 40);
+            dGV_Phong.Location = new Point(520, 53);
+            dGV_Phong.Margin = new Padding(3, 4, 3, 4);
             dGV_Phong.Name = "dGV_Phong";
+            dGV_Phong.RowHeadersWidth = 51;
             dGV_Phong.RowTemplate.Height = 25;
             dGV_Phong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dGV_Phong.Size = new Size(240, 150);
+            dGV_Phong.Size = new Size(274, 200);
             dGV_Phong.TabIndex = 24;
             dGV_Phong.CellClick += dGV_Phong_CellClick;
             // 
             // SinhVienForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1042, 514);
+            ClientSize = new Size(1191, 685);
             Controls.Add(dGV_Phong);
-            Controls.Add(btnHoaDon);
             Controls.Add(btnSua);
             Controls.Add(btnThem);
             Controls.Add(dGV_SV);
@@ -209,7 +190,6 @@
             Controls.Add(txtHoTen);
             Controls.Add(txtEmail);
             Controls.Add(txtID);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "SinhVienForm";
             Text = "FormSV";
             Load += FormSV_Load;
@@ -223,7 +203,6 @@
         private DataGridView dGV_SV;
         private Button btnThem;
         private Button btnSua;
-        private Button btnHoaDon;
         private TextBox txtID;
         private TextBox txtEmail;
         private TextBox txtHoTen;

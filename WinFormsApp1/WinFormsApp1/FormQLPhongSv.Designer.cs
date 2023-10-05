@@ -45,9 +45,10 @@
             // 
             // btn_XoaSV
             // 
-            btn_XoaSV.Location = new Point(392, 86);
+            btn_XoaSV.Location = new Point(448, 115);
+            btn_XoaSV.Margin = new Padding(3, 4, 3, 4);
             btn_XoaSV.Name = "btn_XoaSV";
-            btn_XoaSV.Size = new Size(122, 23);
+            btn_XoaSV.Size = new Size(139, 31);
             btn_XoaSV.TabIndex = 0;
             btn_XoaSV.Text = "Xóa sinh viên";
             btn_XoaSV.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@
             // 
             // btn_ChuyenPhong
             // 
-            btn_ChuyenPhong.Location = new Point(531, 86);
+            btn_ChuyenPhong.Location = new Point(607, 115);
+            btn_ChuyenPhong.Margin = new Padding(3, 4, 3, 4);
             btn_ChuyenPhong.Name = "btn_ChuyenPhong";
-            btn_ChuyenPhong.Size = new Size(122, 23);
+            btn_ChuyenPhong.Size = new Size(139, 31);
             btn_ChuyenPhong.TabIndex = 0;
             btn_ChuyenPhong.Text = "Chuyển phòng";
             btn_ChuyenPhong.UseVisualStyleBackColor = true;
@@ -66,54 +68,59 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 20);
+            label1.Location = new Point(14, 27);
             label1.Name = "label1";
-            label1.Size = new Size(42, 15);
+            label1.Size = new Size(51, 20);
             label1.TabIndex = 1;
             label1.Text = "Phòng";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(531, 9);
+            label2.Location = new Point(607, 12);
             label2.Name = "label2";
-            label2.Size = new Size(74, 15);
+            label2.Size = new Size(91, 20);
             label2.TabIndex = 1;
             label2.Text = "Phòng trống";
             // 
             // cbb_Phong
             // 
             cbb_Phong.FormattingEnabled = true;
-            cbb_Phong.Location = new Point(69, 17);
+            cbb_Phong.Location = new Point(79, 23);
+            cbb_Phong.Margin = new Padding(3, 4, 3, 4);
             cbb_Phong.Name = "cbb_Phong";
-            cbb_Phong.Size = new Size(121, 23);
+            cbb_Phong.Size = new Size(138, 28);
             cbb_Phong.TabIndex = 2;
             cbb_Phong.SelectedValueChanged += cbb_Phong_SelectedValueChanged;
             // 
             // cbb_PhongTrong
             // 
             cbb_PhongTrong.FormattingEnabled = true;
-            cbb_PhongTrong.Location = new Point(531, 35);
+            cbb_PhongTrong.Location = new Point(607, 47);
+            cbb_PhongTrong.Margin = new Padding(3, 4, 3, 4);
             cbb_PhongTrong.Name = "cbb_PhongTrong";
-            cbb_PhongTrong.Size = new Size(121, 23);
+            cbb_PhongTrong.Size = new Size(138, 28);
             cbb_PhongTrong.TabIndex = 2;
             // 
             // dGV_SinhVien
             // 
             dGV_SinhVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGV_SinhVien.Location = new Point(12, 141);
+            dGV_SinhVien.Location = new Point(14, 188);
+            dGV_SinhVien.Margin = new Padding(3, 4, 3, 4);
             dGV_SinhVien.Name = "dGV_SinhVien";
             dGV_SinhVien.ReadOnly = true;
+            dGV_SinhVien.RowHeadersWidth = 51;
             dGV_SinhVien.RowTemplate.Height = 25;
             dGV_SinhVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dGV_SinhVien.Size = new Size(765, 235);
+            dGV_SinhVien.Size = new Size(874, 313);
             dGV_SinhVien.TabIndex = 3;
             // 
             // btm_timPhongTrong
             // 
-            btm_timPhongTrong.Location = new Point(392, 35);
+            btm_timPhongTrong.Location = new Point(448, 47);
+            btm_timPhongTrong.Margin = new Padding(3, 4, 3, 4);
             btm_timPhongTrong.Name = "btm_timPhongTrong";
-            btm_timPhongTrong.Size = new Size(110, 23);
+            btm_timPhongTrong.Size = new Size(126, 31);
             btm_timPhongTrong.TabIndex = 4;
             btm_timPhongTrong.Text = "Tìm phòng trống";
             btm_timPhongTrong.UseVisualStyleBackColor = true;
@@ -123,18 +130,21 @@
             // 
             grb_Sv_Hd.Controls.Add(rdb_HoaDon);
             grb_Sv_Hd.Controls.Add(rdb_SV);
-            grb_Sv_Hd.Location = new Point(18, 41);
+            grb_Sv_Hd.Location = new Point(21, 55);
+            grb_Sv_Hd.Margin = new Padding(3, 4, 3, 4);
             grb_Sv_Hd.Name = "grb_Sv_Hd";
-            grb_Sv_Hd.Size = new Size(264, 93);
+            grb_Sv_Hd.Padding = new Padding(3, 4, 3, 4);
+            grb_Sv_Hd.Size = new Size(302, 124);
             grb_Sv_Hd.TabIndex = 5;
             grb_Sv_Hd.TabStop = false;
             // 
             // rdb_HoaDon
             // 
             rdb_HoaDon.AutoSize = true;
-            rdb_HoaDon.Location = new Point(143, 34);
+            rdb_HoaDon.Location = new Point(163, 45);
+            rdb_HoaDon.Margin = new Padding(3, 4, 3, 4);
             rdb_HoaDon.Name = "rdb_HoaDon";
-            rdb_HoaDon.Size = new Size(71, 19);
+            rdb_HoaDon.Size = new Size(88, 24);
             rdb_HoaDon.TabIndex = 1;
             rdb_HoaDon.Text = "Hóa đơn";
             rdb_HoaDon.UseVisualStyleBackColor = true;
@@ -144,9 +154,10 @@
             // 
             rdb_SV.AutoSize = true;
             rdb_SV.Checked = true;
-            rdb_SV.Location = new Point(6, 34);
+            rdb_SV.Location = new Point(7, 45);
+            rdb_SV.Margin = new Padding(3, 4, 3, 4);
             rdb_SV.Name = "rdb_SV";
-            rdb_SV.Size = new Size(74, 19);
+            rdb_SV.Size = new Size(91, 24);
             rdb_SV.TabIndex = 0;
             rdb_SV.TabStop = true;
             rdb_SV.Text = "Sinh Viên";
@@ -155,9 +166,10 @@
             // 
             // FormQLPhongSv
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoSize = true;
+            ClientSize = new Size(914, 600);
             Controls.Add(grb_Sv_Hd);
             Controls.Add(btm_timPhongTrong);
             Controls.Add(dGV_SinhVien);
@@ -167,6 +179,7 @@
             Controls.Add(label1);
             Controls.Add(btn_ChuyenPhong);
             Controls.Add(btn_XoaSV);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormQLPhongSv";
             Text = "FormQLPhongSv";
             Load += FormQLPhongSv_Load;

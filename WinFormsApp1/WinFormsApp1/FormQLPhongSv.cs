@@ -195,7 +195,7 @@ namespace WinFormsApp1
                     if (sv.idSinhVien == idsv)
                         doc = sv;
                 }
-                
+
 
                 var update = Builders<Phong>.Update.Push(x => x.sinhVien, doc);
                 collection.UpdateOne(filter1, update);
@@ -205,7 +205,7 @@ namespace WinFormsApp1
                 var updateOptions1 = new UpdateOptions { IsUpsert = false };
                 collection.UpdateMany(filter, update1, updateOptions1);
 
-                
+
 
                 MessageBox.Show("Đã chuyển sinh viên!");
                 loadSinhVienHD();
