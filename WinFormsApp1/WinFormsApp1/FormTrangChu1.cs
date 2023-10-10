@@ -41,7 +41,6 @@ namespace WinFormsApp1
             this.panelMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
 
         private void btnSinhVien_Click(object sender, EventArgs e)
