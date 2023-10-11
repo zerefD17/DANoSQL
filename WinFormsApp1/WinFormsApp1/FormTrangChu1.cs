@@ -52,7 +52,7 @@ namespace WinFormsApp1
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormQLPhongSv(), sender);
-            txtTitle.Text = "HÓA ĐƠN";
+            txtTitle.Text = "QUẢN LÝ SINH VIÊN - PHÒNG";
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)

@@ -45,6 +45,7 @@ namespace WinFormsApp1
         }
         private void loadPhongTrong()
         {
+            cbb_PhongTrong.Items.Clear();
             var filter = Builders<Phong>.Filter.Where(doc =>
                 doc.sinhVien.Count < doc.loaiPhong
             );
@@ -87,6 +88,7 @@ namespace WinFormsApp1
         }
         private void btm_timPhongTrong_Click(object sender, EventArgs e)
         {
+            
             loadPhongTrong();
         }
 
