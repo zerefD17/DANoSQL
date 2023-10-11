@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelMenu = new Panel();
+            btnThongKe = new Button();
             btnTinhTien = new Button();
             btnPhong = new Button();
             btnHoaDon = new Button();
@@ -39,7 +40,6 @@
             panel1 = new Panel();
             btnClose = new Button();
             txtTitle = new Label();
-            btnThongKe = new Button();
             panelMenu.SuspendLayout();
             panelTitle.SuspendLayout();
             panelMain.SuspendLayout();
@@ -57,9 +57,26 @@
             panelMenu.Controls.Add(panelTitle);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
+            panelMenu.Margin = new Padding(3, 2, 3, 2);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(210, 953);
+            panelMenu.Size = new Size(184, 562);
             panelMenu.TabIndex = 0;
+            // 
+            // btnThongKe
+            // 
+            btnThongKe.BackColor = Color.FromArgb(206, 234, 247);
+            btnThongKe.Dock = DockStyle.Top;
+            btnThongKe.FlatAppearance.BorderSize = 0;
+            btnThongKe.FlatStyle = FlatStyle.Flat;
+            btnThongKe.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnThongKe.Location = new Point(0, 300);
+            btnThongKe.Margin = new Padding(3, 2, 3, 2);
+            btnThongKe.Name = "btnThongKe";
+            btnThongKe.Size = new Size(184, 60);
+            btnThongKe.TabIndex = 5;
+            btnThongKe.Text = "Thống Kê";
+            btnThongKe.UseVisualStyleBackColor = false;
+            btnThongKe.Click += btnThongKe_Click;
             // 
             // btnTinhTien
             // 
@@ -68,9 +85,10 @@
             btnTinhTien.FlatAppearance.BorderSize = 0;
             btnTinhTien.FlatStyle = FlatStyle.Flat;
             btnTinhTien.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnTinhTien.Location = new Point(0, 320);
+            btnTinhTien.Location = new Point(0, 240);
+            btnTinhTien.Margin = new Padding(3, 2, 3, 2);
             btnTinhTien.Name = "btnTinhTien";
-            btnTinhTien.Size = new Size(210, 80);
+            btnTinhTien.Size = new Size(184, 60);
             btnTinhTien.TabIndex = 4;
             btnTinhTien.Text = "Tính tiền";
             btnTinhTien.UseVisualStyleBackColor = false;
@@ -83,9 +101,10 @@
             btnPhong.FlatAppearance.BorderSize = 0;
             btnPhong.FlatStyle = FlatStyle.Flat;
             btnPhong.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPhong.Location = new Point(0, 240);
+            btnPhong.Location = new Point(0, 180);
+            btnPhong.Margin = new Padding(3, 2, 3, 2);
             btnPhong.Name = "btnPhong";
-            btnPhong.Size = new Size(210, 80);
+            btnPhong.Size = new Size(184, 60);
             btnPhong.TabIndex = 3;
             btnPhong.Text = "Phòng";
             btnPhong.UseVisualStyleBackColor = false;
@@ -98,11 +117,12 @@
             btnHoaDon.FlatAppearance.BorderSize = 0;
             btnHoaDon.FlatStyle = FlatStyle.Flat;
             btnHoaDon.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHoaDon.Location = new Point(0, 160);
+            btnHoaDon.Location = new Point(0, 120);
+            btnHoaDon.Margin = new Padding(3, 2, 3, 2);
             btnHoaDon.Name = "btnHoaDon";
-            btnHoaDon.Size = new Size(210, 80);
+            btnHoaDon.Size = new Size(184, 60);
             btnHoaDon.TabIndex = 2;
-            btnHoaDon.Text = "Hóa đơn";
+            btnHoaDon.Text = "Quản Lý Sinh Viên - Phòng";
             btnHoaDon.UseVisualStyleBackColor = false;
             btnHoaDon.Click += btnHoaDon_Click;
             // 
@@ -113,10 +133,10 @@
             btnSinhVien.FlatAppearance.BorderSize = 0;
             btnSinhVien.FlatStyle = FlatStyle.Flat;
             btnSinhVien.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSinhVien.Location = new Point(0, 80);
-            btnSinhVien.Margin = new Padding(3, 3, 3, 10);
+            btnSinhVien.Location = new Point(0, 60);
+            btnSinhVien.Margin = new Padding(3, 2, 3, 8);
             btnSinhVien.Name = "btnSinhVien";
-            btnSinhVien.Size = new Size(210, 80);
+            btnSinhVien.Size = new Size(184, 60);
             btnSinhVien.TabIndex = 1;
             btnSinhVien.Text = "Sinh viên";
             btnSinhVien.UseVisualStyleBackColor = false;
@@ -128,8 +148,9 @@
             panelTitle.Controls.Add(label1);
             panelTitle.Dock = DockStyle.Top;
             panelTitle.Location = new Point(0, 0);
+            panelTitle.Margin = new Padding(3, 2, 3, 2);
             panelTitle.Name = "panelTitle";
-            panelTitle.Size = new Size(210, 80);
+            panelTitle.Size = new Size(184, 60);
             panelTitle.TabIndex = 0;
             // 
             // label1
@@ -138,9 +159,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(222, 242, 200);
-            label1.Location = new Point(2, 24);
+            label1.Location = new Point(2, 18);
             label1.Name = "label1";
-            label1.Size = new Size(202, 30);
+            label1.Size = new Size(168, 25);
             label1.TabIndex = 0;
             label1.Text = "Quản lý điện nước";
             label1.Click += label1_Click;
@@ -149,9 +170,10 @@
             // 
             panelMain.Controls.Add(panel1);
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(210, 0);
+            panelMain.Location = new Point(184, 0);
+            panelMain.Margin = new Padding(3, 2, 3, 2);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1072, 953);
+            panelMain.Size = new Size(938, 562);
             panelMain.TabIndex = 1;
             // 
             // panel1
@@ -161,8 +183,9 @@
             panel1.Controls.Add(txtTitle);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1072, 80);
+            panel1.Size = new Size(938, 60);
             panel1.TabIndex = 0;
             // 
             // btnClose
@@ -170,9 +193,10 @@
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.ForeColor = Color.FromArgb(125, 130, 184);
-            btnClose.Location = new Point(937, 18);
+            btnClose.Location = new Point(820, 14);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(49, 49);
+            btnClose.Size = new Size(43, 37);
             btnClose.TabIndex = 1;
             btnClose.Text = "X";
             btnClose.UseVisualStyleBackColor = true;
@@ -183,35 +207,21 @@
             txtTitle.AutoSize = true;
             txtTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             txtTitle.ForeColor = Color.FromArgb(241, 171, 134);
-            txtTitle.Location = new Point(354, 18);
+            txtTitle.Location = new Point(310, 14);
             txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(142, 37);
+            txtTitle.Size = new Size(115, 30);
             txtTitle.TabIndex = 0;
             txtTitle.Text = "Trang chủ";
             txtTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnThongKe
-            // 
-            btnThongKe.BackColor = Color.FromArgb(206, 234, 247);
-            btnThongKe.Dock = DockStyle.Top;
-            btnThongKe.FlatAppearance.BorderSize = 0;
-            btnThongKe.FlatStyle = FlatStyle.Flat;
-            btnThongKe.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnThongKe.Location = new Point(0, 400);
-            btnThongKe.Name = "btnThongKe";
-            btnThongKe.Size = new Size(210, 80);
-            btnThongKe.TabIndex = 5;
-            btnThongKe.Text = "Thống Kê";
-            btnThongKe.UseVisualStyleBackColor = false;
-            btnThongKe.Click += btnThongKe_Click;
-            // 
             // FormTrangChu1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1282, 953);
+            ClientSize = new Size(1122, 562);
             Controls.Add(panelMain);
             Controls.Add(panelMenu);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormTrangChu1";
             Text = "FormTrangChu";
             Load += FormTrangChu_Load;
