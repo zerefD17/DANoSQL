@@ -39,6 +39,7 @@
             panel1 = new Panel();
             btnClose = new Button();
             txtTitle = new Label();
+            btnThongKe = new Button();
             panelMenu.SuspendLayout();
             panelTitle.SuspendLayout();
             panelMain.SuspendLayout();
@@ -48,6 +49,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(29, 32, 31);
+            panelMenu.Controls.Add(btnThongKe);
             panelMenu.Controls.Add(btnTinhTien);
             panelMenu.Controls.Add(btnPhong);
             panelMenu.Controls.Add(btnHoaDon);
@@ -188,6 +190,21 @@
             txtTitle.Text = "Trang chủ";
             txtTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnThongKe
+            // 
+            btnThongKe.BackColor = Color.FromArgb(206, 234, 247);
+            btnThongKe.Dock = DockStyle.Top;
+            btnThongKe.FlatAppearance.BorderSize = 0;
+            btnThongKe.FlatStyle = FlatStyle.Flat;
+            btnThongKe.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnThongKe.Location = new Point(0, 400);
+            btnThongKe.Name = "btnThongKe";
+            btnThongKe.Size = new Size(210, 80);
+            btnThongKe.TabIndex = 5;
+            btnThongKe.Text = "Thống Kê";
+            btnThongKe.UseVisualStyleBackColor = false;
+            btnThongKe.Click += btnThongKe_Click;
+            // 
             // FormTrangChu1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -220,5 +237,6 @@
         private Panel panel1;
         private Label txtTitle;
         private Button btnClose;
+        private Button btnThongKe;
     }
 }

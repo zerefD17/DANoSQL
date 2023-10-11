@@ -49,7 +49,6 @@ namespace WinFormsApp1
             var documents = collection.Find(filter).ToList();
 
 
-
             dGV_Phong.DataSource = documents;
             dGV_Phong.Columns["_id"].Visible = false;
         }

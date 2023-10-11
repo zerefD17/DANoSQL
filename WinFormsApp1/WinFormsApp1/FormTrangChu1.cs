@@ -74,5 +74,11 @@ namespace WinFormsApp1
             txtTitle.Text = "Trang chủ";
             btnClose.Visible = false;
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormThongKe(), sender);
+            txtTitle.Text = "THỐNG KÊ";
+        }
     }
 }

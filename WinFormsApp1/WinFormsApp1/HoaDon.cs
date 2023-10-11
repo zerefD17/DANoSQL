@@ -26,7 +26,7 @@ namespace WinFormsApp1
         public DateTime ThoiGianTao { get; set; }
 
         [BsonElement("tong_tien")]
-        public decimal TongTien { get; set; }
+        public decimal TongTien { get; set; } //decimal
 
         [BsonElement("note")]
         public string Note { get; set; }
