@@ -278,7 +278,7 @@
             panel6.Controls.Add(label12);
             panel6.Location = new Point(602, 168);
             panel6.Name = "panel6";
-            panel6.Size = new Size(271, 99);
+            panel6.Size = new Size(349, 99);
             panel6.TabIndex = 0;
             panel6.Paint += panel6_Paint;
             // 
@@ -329,7 +329,7 @@
             panel7.Controls.Add(label14);
             panel7.Location = new Point(602, 265);
             panel7.Name = "panel7";
-            panel7.Size = new Size(273, 99);
+            panel7.Size = new Size(349, 99);
             panel7.TabIndex = 0;
             // 
             // txtSSNuoc
@@ -536,7 +536,7 @@
             Controls.Add(panel8);
             Controls.Add(panel1);
             Name = "FormThongKe";
-            Text = "FormThongKe";
+            Text = " ";
             Load += FormThongKe_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

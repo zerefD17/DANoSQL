@@ -177,8 +177,6 @@ namespace WinFormsApp1
                 string soPhong = selectedRow.Cells["soPhong"].Value.ToString();
                 string loaiPhong = selectedRow.Cells["loaiPhong"].Value.ToString();
 
-
-
                 txtSoPhong.Text = soPhong;
                 txtLoaiPhong.Text = loaiPhong;
 

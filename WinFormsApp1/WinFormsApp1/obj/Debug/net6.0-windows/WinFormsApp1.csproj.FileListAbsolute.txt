@@ -163,3 +163,4 @@ D:\sang\HK7\nosql\dk\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\refint\W
 D:\sang\HK7\nosql\dk\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 D:\sang\HK7\nosql\dk\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\sang\HK7\nosql\dk\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+D:\CODE\nosql2\DANoSQL\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.FormDangNhap.resources

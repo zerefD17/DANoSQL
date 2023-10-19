@@ -96,7 +96,6 @@ namespace WinFormsApp1
         void getSLSinhVien()
         {
 
-
             var filter = Builders<Phong>.Filter.Empty;
             var phongList = collection.Find(filter).ToList();
 
@@ -165,8 +164,6 @@ namespace WinFormsApp1
             var currentYear = DateTime.Now.Year;
 
 
-
-
             var filter = Builders<Phong>.Filter.Empty;
 
             var hdList = collection.Find(filter).ToList();
@@ -190,30 +187,26 @@ namespace WinFormsApp1
         {
 
 
-            var filter = Builders<Phong>.Filter.ElemMatch(p => p.hoaDon, hd => hd.TrangThaiThanhToan == true);
+            //var filter = Builders<Phong>.Filter.ElemMatch(p => p.hoaDon, hd => hd.TrangThaiThanhToan == true);
 
+            var builder = Builders<Phong>.Filter;
+            var filter = builder.Eq("hoaDon.trang_thai_thanh_toan", true);
+            var phongList = collection.Find(filter).ToList();
 
             decimal tongDoanhThu = 0;
-
             decimal tongDoanhThuThangNay = tongDoanhThuThangHT();
-
             decimal tongTienChuaThanhToan = tongTienChuaTT();
 
-            var phongList = collection.Find(filter).ToList();
 
             foreach (var phong in phongList)
             {
-
                 foreach (var hoaDon in phong.hoaDon)
                 {
-
                     if (hoaDon.TrangThaiThanhToan)
                     {
                         tongDoanhThu += hoaDon.TongTien;
 
-
                     }
-
                 }
             }
 
