@@ -42,6 +42,7 @@
             label5 = new Label();
             label1 = new Label();
             dGV_Phong = new DataGridView();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dGV_SV).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dGV_Phong).BeginInit();
             SuspendLayout();
@@ -69,7 +70,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(669, 331);
+            btnSua.Location = new Point(700, 327);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 22;
@@ -171,11 +172,22 @@
             dGV_Phong.TabIndex = 24;
             dGV_Phong.CellClick += dGV_Phong_CellClick;
             // 
+            // button1
+            // 
+            button1.Location = new Point(870, 39);
+            button1.Name = "button1";
+            button1.Size = new Size(125, 44);
+            button1.TabIndex = 25;
+            button1.Text = "Tìm kiếm";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // SinhVienForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1191, 685);
+            Controls.Add(button1);
             Controls.Add(dGV_Phong);
             Controls.Add(btnSua);
             Controls.Add(btnThem);
@@ -214,5 +226,6 @@
         private Label label5;
         private Label label1;
         private DataGridView dGV_Phong;
+        private Button button1;
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n1hb4Otwqp63hKwIuMXOELs2gI0vwg92ZIE12tAPzENTLurzPjxEFz7vhfMpgLnkxM5rypl0WXQWq2dOrG8FLA==",
+  "dgSpecHash": "7NwGtscurckA3zfCRLu8kBj0czB5R4Ksj83DXWAMMjIDUloHZABuWBjy7CsAK1Tx2mOObwxpQrKNS7GvZzzR9A==",
   "success": true,
-  "projectFilePath": "D:\\CODE\\nosql2\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "D:\\CODE\\nosql3\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\datho\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\datho\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

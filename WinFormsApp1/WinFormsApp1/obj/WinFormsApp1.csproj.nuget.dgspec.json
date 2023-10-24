@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CODE\\nosql2\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "D:\\CODE\\nosql3\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "D:\\CODE\\nosql2\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "D:\\CODE\\nosql3\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CODE\\nosql2\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "D:\\CODE\\nosql3\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "D:\\CODE\\nosql2\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "D:\\CODE\\nosql3\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\datho\\.nuget\\packages\\",
-        "outputPath": "D:\\CODE\\nosql2\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "outputPath": "D:\\CODE\\nosql3\\DANoSQL\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

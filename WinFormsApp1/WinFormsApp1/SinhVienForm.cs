@@ -316,5 +316,34 @@ namespace WinFormsApp1
             FormTinhTien tt = new FormTinhTien();
             tt.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            dGV_SV.DataSource = null;
+
+            string ten = txtHoTen.Text;
+
+            var filter = Builders<Phong>.Filter.Where(x => x.sinhVien.Any(sv => sv.hoTen == ten));
+
+            var result = collection.Find(filter).ToList();
+
+            var documents = collection.Find(filter).ToList();
+            
+            List<SinhVien> lstsv = new List<SinhVien>();
+            foreach(var document in documents)
+            {
+                foreach (SinhVien sv in document.sinhVien)
+                {
+                    lstsv.Add(sv);
+                }
+                dGV_SV.DataSource = lstsv;
+                
+
+            }
+
+
+
+        }
     }
 }
